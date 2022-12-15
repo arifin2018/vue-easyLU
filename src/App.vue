@@ -3,7 +3,7 @@
     {{ title }}
   </div>
   <NavbarComponent/>
-  <AllFriends :friends="friends"/>
+  <AllFriends :friends="friends" @delete="deleteFriend"/>
   <OnlineFriends :friends="friends"/>
   
   <!-- <img alt="Vue logo" src="./assets/logo.png">
@@ -51,6 +51,15 @@ export default {
         ]
       }
     },
+    methods:{
+      deleteFriend(name){
+        this.friends.filter(function(friend){
+          if (friend.name == name) {
+            return friend.online = !friend.online;
+          }
+        });
+      }
+    }
 }
 </script>
 

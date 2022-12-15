@@ -12,30 +12,6 @@
 export default {
   name:'AllFriends',
   props: ['friends'],
-  data() {
-    return {
-      // friends:[
-      //   {name:'A', online:true, parrent:[
-      //     {
-      //       father: 'arifin',
-      //       mother: 'awd'
-      //     }
-      //   ]},
-      //   {name:'B', online:true, parrent:[
-      //     {
-      //       father: 'awdw',
-      //       mother: 'awdxxx'
-      //     }
-      //   ]},
-      //   {name:'C', online:false, parrent:[
-      //     {
-      //       father: 'bbbbbb',
-      //       mother: 'cccc'
-      //     }
-      //   ]},
-      // ],
-    }
-  },
   methods: {
     validationOnline(){
       let data = []
@@ -47,9 +23,6 @@ export default {
       return data;
     }
   },
-  mounted() {
-    console.log(this.validationOnline()[0].name);
-  }
 }
 </script>
 
