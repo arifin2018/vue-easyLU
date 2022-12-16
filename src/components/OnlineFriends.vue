@@ -9,9 +9,16 @@
 </template>
 
 <script>
+
+
 export default {
   name:'AllFriends',
   props: ['friends'],
+  data() {
+    return {
+      data: []
+    }
+  },
   methods: {
     validationOnline(){
       let data = []

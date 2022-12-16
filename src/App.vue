@@ -3,25 +3,27 @@
     {{ title }}
   </div>
   <NavbarComponent/>
-  <AllFriends :friends="friends" @delete="deleteFriend"/>
-  <OnlineFriends :friends="friends"/>
-  
-  <!-- <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+  <HookComponent/>
+  <!-- <AllFriends :friends="friends" @delete="deleteFriend"/>
+  <OnlineFriends :friends="friends"/> -->
+
+
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 import NavbarComponent from "./components/Navbar-Component.vue";
-import AllFriends from "./components/AllFriends.vue";
-import OnlineFriends from "./components/OnlineFriends.vue";
+import HookComponent from "./components/HookComponent.vue";
+// import AllFriends from "./components/AllFriends.vue";
+// import OnlineFriends from "./components/OnlineFriends.vue";
 
 export default {
   name: 'App',
   components: {
-    AllFriends,
+    // AllFriends,
     NavbarComponent,
-    OnlineFriends
+    HookComponent,
+    // OnlineFriends
   },
   data() {
       return {
